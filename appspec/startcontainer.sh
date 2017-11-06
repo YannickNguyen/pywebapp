@@ -1,5 +1,5 @@
 #!/bin/bash
-$(aws ecr get-login --region us-west-2)
+$(aws ecr get-login --region us-west-2 --no-include-email)
 docker pull 793148705219.dkr.ecr.us-west-2.amazonaws.com/yannicknguyen/pywebapp:latest || {
     echo "ERROR: docker pull failed. Sleeping for 10 minutes to allow investigation..."
     sleep 600
